@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Yuuriya Tech</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+    <div class="ascii">
+     __    __                                              
+    /\ \  /\ \                      __                     
+    \ `\`\\/'/__  __  __  __  _ __ /\_\  __  __     __     
+     `\ `\ /'/\ \/\ \/\ \/\ \/\`'__\/\ \/\ \/\ \  /'__`\   
+       `\ \ \\ \ \_\ \ \ \_\ \ \ \/ \ \ \ \ \_\ \/\ \L\.\_ 
+         \ \_\\ \____/\ \____/\ \_\  \ \_\/`____ \ \__/.\_\
+          \/_/ \/___/  \/___/  \/_/   \/_/`/___/> \/__/\/_/
+                                             /\___/        
+                                             \/__/
+    </div>
+  <div class="everything">
+    <form action="https://ayasearx.herokuapp.com/search" method="GET">
+      <input autofocus name="q" class="search" type="search" id="search-bar-input" placeholder="Type Here..." />
+    </form>
+    <div class="box">
+      <div class="link">
+        <ul>
+          <li><a href="https://blog.yuuriya.tech">BLOG</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+          <li><a href="https://github.com">Github</a></li>
+          <li><a href="https://nyaa.si">Nyaa.si</a></li>
+        </ul>
+      </div>
+      <!-- Feel free to add more divs here -->
+    </div>
+  </div>
+  <script>
+    function updateClock() {
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let ampm = hours >= 12 ? "pm" : "am";
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      let time = hours + ":" + minutes + " " + ampm;
+      document.getElementById("time").innerHTML = time;
+      setTimeout(updateClock, 1000);
+    }
+
+    updateClock();
+  </script>
+</body>
+
+</html>
